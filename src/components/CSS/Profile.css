@@ -1,0 +1,158 @@
+/* Profil conteneur principal */
+#profile-section {
+  padding: 40px;
+  background-color: #f0f8ff; /* Couleur pastel bleue */
+  max-width: 750px;
+  margin: 50px auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out; /* Animation plus lente */
+}
+
+/* Effet au survol du conteneur */
+#profile-section:hover {
+  transform: scale(1.05); /* Légère augmentation de taille */
+}
+
+/* Titre du profil */
+#profile-heading {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #3a3a3a; /* Gris doux */
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: color 0.6s ease; /* Animation plus lente */
+}
+
+/* Animation au survol du titre */
+#profile-heading:hover {
+  color: #4CAF50; /* Couleur verte douce */
+}
+
+/* Formulaire de profil */
+#profile-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Champs de profil */
+.profile-data-field {
+  margin-bottom: 20px;
+  position: relative;
+  /* Suppression des animations sur les champs */
+}
+
+/* Labels des champs */
+.profile-data-field label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555; /* Gris clair */
+  margin-bottom: 8px;
+  display: block;
+  /* Suppression de l'animation sur les labels */
+}
+
+/* Animation au focus ou validation du champ */
+.profile-data-field input:focus + label,
+.profile-data-field input:valid + label {
+  transform: translateY(-10px);
+  color: #4CAF50; /* Vert doux */
+  font-size: 14px;
+}
+
+/* Champs de saisie */
+.profile-input-field {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  background-color: #e6f7ff; /* Bleu pastel clair */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  /* Suppression de l'animation sur les champs */
+}
+
+/* Effet de focus sur les champs */
+.profile-input-field:focus {
+  outline: none;
+  border-color: #4CAF50; /* Vert doux */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Message d'alerte pour utilisateur non connecté */
+#profile-not-logged-in-message {
+  font-size: 20px;
+  text-align: center;
+  color: #e74c3c;
+  margin-top: 20px;
+  animation: fadeInMessage 1.5s ease-in-out; /* Animation plus lente */
+}
+
+@keyframes fadeInMessage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Ajout d'un effet de fond subtil */
+#profile-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: background 0.6s ease;
+}
+
+#profile-section:hover::before {
+  background: rgba(0, 128, 128, 0.1);
+}
+
+/* Ajouter une ligne subtile sous le titre */
+#profile-heading::after {
+  content: '';
+  display: block;
+  margin-top: 20px;
+  width: 50px;
+  height: 3px;
+  background-color: #4CAF50; /* Vert doux */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+  #profile-section {
+    padding: 25px;
+  }
+
+  #profile-heading {
+    font-size: 28px;
+  }
+
+  .profile-data-field {
+    margin-bottom: 15px;
+  }
+
+  .profile-input-field {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

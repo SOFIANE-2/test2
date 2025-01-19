@@ -1,0 +1,101 @@
+/* CSS spécifique à la page ChangeColor */
+.change-color-page-container {
+  padding: 60px;
+  background-color: #f8faff;
+  border-radius: 12px;
+  width: 700px;
+  margin: 50px auto;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.change-color-page-container:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.change-color-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.change-color-current-color {
+  font-size: 20px;
+  color: #444;
+}
+
+.change-color-current-color-value {
+  font-weight: bold;
+}
+
+.change-color-select-container {
+  margin-top: 20px;
+}
+
+.change-color-select-input {
+  padding: 16px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: border 0.3s ease;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.change-color-select-input:hover {
+  border: 1px solid #4CAF50;
+}
+
+.change-color-submit-button {
+  margin-top: 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.change-color-submit-button:hover {
+  background-color: #45a049;
+}
+
+.change-color-submit-button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.change-color-message-container {
+  margin-top: 25px;
+  font-size: 18px;
+  padding: 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.change-color-message-container.success {
+  background-color: #e7f7e7;
+  color: #2e8b57;
+  border: 1px solid #2e8b57;
+}
+
+.change-color-message-container.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #721c24;
+}
+
+.change-color-select-input:focus {
+  border-color: #4CAF50;
+}
+
+.change-color-page-container {
+  background-color: var(--bg-color, #f8faff);
+}

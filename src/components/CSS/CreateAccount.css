@@ -1,0 +1,125 @@
+#createaccount-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#createaccount-form-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#createaccount-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+#form-row-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+#form-column-left, #form-column-right {
+  width: 48%;
+}
+
+#createaccount-form input,
+#createaccount-form select {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 25px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#createaccount-form #submit-button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+#createaccount-form #submit-button:hover {
+  background-color: #3e8e41;
+}
+
+#error-message-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 10px;
+  color: #721c24;
+  animation: fadeIn 0.5s ease-in-out;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#error-message-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#error-message-container li {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#error-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+#error-loading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #4CAF50;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

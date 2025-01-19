@@ -1,0 +1,109 @@
+/* Conteneur principal */
+#demandes-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Titre principal */
+#demandes-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Table des demandes */
+#demandes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#demandes-table th,
+#demandes-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#demandes-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+#demandes-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#demandes-table tbody tr:hover {
+  background-color: #e9e9e9;
+  transition: background-color 0.3s ease;
+}
+
+/* Actions boutons */
+.actions-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.actions-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions-buttons button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #666;
+}
+
+.actions-buttons button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.actions-buttons button:nth-child(1) {
+  background-color: #6c757d;
+  color: white;
+}
+
+.actions-buttons button:nth-child(2) {
+  background-color: #ffc107;
+  color: white;
+}
+
+.actions-buttons button:nth-child(3) {
+  background-color: #28a745;
+  color: white;
+}
+
+.actions-buttons button:nth-child(4) {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Messages d'erreur ou chargement */
+#demandes-container .message {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+#demandes-container .message.error {
+  color: red;
+  font-weight: bold;
+}
+
+#demandes-container .message.loading {
+  color: #007bff;
+  font-weight: bold;
+}

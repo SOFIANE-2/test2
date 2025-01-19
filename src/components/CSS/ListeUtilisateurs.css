@@ -1,0 +1,134 @@
+/* Style global pour la page ListeUtilisateurs */
+#utilisateurs-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#utilisateurs-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Titre principal */
+#page-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Animation d'entrée */
+#fade-in-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Tableau des utilisateurs */
+#utilisateurs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#utilisateurs-table th, #utilisateurs-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#utilisateurs-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+#utilisateurs-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Boutons d'actions */
+#edit-button, #view-details-button, #delete-button {
+  padding: 8px 16px;
+  margin: 5px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#edit-button:hover, #view-details-button:hover, #delete-button:hover {
+  background-color: #0056b3;
+}
+
+/* Formulaire de modification et détails */
+#form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#form-container input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#form-container .form-submit-button {
+  grid-column: span 2;
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+}
+
+#form-container .form-cancel-button {
+  grid-column: span 2;
+  width: 100%;
+  padding: 12px;
+  background-color: #dc3545;
+}
+
+#form-container .form-submit-button:hover {
+  background-color: #218838;
+}
+
+#form-container .form-cancel-button:hover {
+  background-color: #c82333;
+}
+
+/* Message d'erreur ou succès */
+#message-container {
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#message-container.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+#message-container.success {
+  background-color: #d4edda;
+  color: #155724;
+}

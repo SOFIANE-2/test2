@@ -1,0 +1,157 @@
+/* Style général pour la page d'accueil */
+#accueil-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Titre principal */
+#accueil-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Sous-titres */
+#accueil-subtitle {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Texte introductif */
+#accueil-description {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Formulaire */
+#accueil-formulaire {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+#accueil-formulaire:hover {
+    transform: translateY(-5px);
+}
+
+/* Champs de formulaire */
+#accueil-formulaire div {
+    margin-bottom: 15px;
+}
+
+#accueil-formulaire label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+#accueil-formulaire input,
+#accueil-formulaire select,
+#accueil-formulaire textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#accueil-formulaire input:focus,
+#accueil-formulaire select:focus,
+#accueil-formulaire textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Bouton de soumission */
+#accueil-submit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#accueil-submit-btn:hover {
+    background-color: #2980b9;
+}
+
+#accueil-submit-btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Message de retour */
+#accueil-message {
+    font-size: 1rem;
+    text-align: center;
+    color: #27ae60;
+    margin-top: 20px;
+}
+
+/* Liste des demandes */
+#accueil-requests-list {
+    margin-top: 40px;
+}
+
+#accueil-requests-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#accueil-requests-list li {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+#accueil-requests-list li:hover {
+    transform: translateY(-5px);
+}
+
+#accueil-requests-list button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#accueil-requests-list button:hover {
+    background-color: #c0392b;
+}
+
+/* Animation de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

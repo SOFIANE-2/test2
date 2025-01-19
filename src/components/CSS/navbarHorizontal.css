@@ -1,0 +1,51 @@
+/* navbar-horizontal.css */
+
+/* Style général pour la barre de navigation */
+#navbar-horizontal {
+    background-color: #333;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Style pour la liste des liens */
+  #navbar-horizontal ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style pour chaque élément de la liste */
+  #navbar-horizontal ul li {
+    margin: 0 15px;
+  }
+  
+  /* Style pour les liens */
+  #navbar-horizontal ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Survol des liens */
+  #navbar-horizontal ul li a:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* Liens actifs */
+  #navbar-horizontal ul li a.active {
+    background-color: #FF6B6B;
+    color: white;
+  }
+  

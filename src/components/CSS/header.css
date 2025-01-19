@@ -1,0 +1,99 @@
+/* Conteneur principal de l'en-tête */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #2c3e50;  /* Bleu foncé */
+  color: white;
+  font-family: 'Arial', sans-serif;
+  border-bottom: 3px solid #1abc9c;  /* Teinte verte */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Informations utilisateur */
+#user-info-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ecf0f1;  /* Couleur claire pour le texte */
+}
+
+/* Bouton de déconnexion */
+#logout-button {
+  background-color: #e74c3c;  /* Rouge orangé */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+}
+
+#logout-button:hover {
+  background-color: #c0392b;  /* Rouge plus foncé */
+  transform: scale(1.05);
+}
+
+#logout-button:focus {
+  outline: none;
+}
+
+
+#logout-button:active {
+  transform: scale(0.98);
+}
+
+
+#header-actions-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#header-left,
+#header-right {
+  display: flex;
+  align-items: center;
+}
+
+#header-right {
+  justify-content: flex-end;
+}
+
+#header .user-info,
+#header .logout {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  #header {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #user-info-container {
+    margin-bottom: 10px;
+  }
+  #logout-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
