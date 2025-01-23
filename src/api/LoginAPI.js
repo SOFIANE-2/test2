@@ -11,10 +11,10 @@ export const verifyLogin = async (nom, motDePasse) => {
         const user = users.find(u => u.nom === nom && u.MotDePasse === motDePasse);
 
         if (user) {
-            // Mock a token (in a real-world case, you'd generate or receive one from a backend)
+
             const token = 'fake-jwt-token'; 
 
-            // Return the user and the token
+
             return { success: true, user, token };
         } else {
             return { success: false, message: 'Nom ou mot de passe incorrect.' };

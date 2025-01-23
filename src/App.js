@@ -15,7 +15,7 @@ import StatisticsDashboard from './components/statisque';
 // New Admin Route Protection Component
 const AdminRoute = ({ children }) => {
   const user = useSelector(state => state.auth.user);
-  
+
   return user?.admin 
     ? children 
     : <Navigate to="/layout/accueil" replace />;
@@ -25,64 +25,63 @@ function App() {
   const user = useSelector(state => state.auth.user);
 
   return (
-    <Router>
-  <Routes>
-    {/* Pages de connexion et création de compte */}
-    <Route path="/login" element={<Login />} />
-    <Route path="/CreateAccount" element={<CreateAccount />} />
+    <Router basename="/Soufian%20Bekkar%20TP%20Final/mini-projet-react">
+      <Routes>
+        {/* Pages de connexion et création de compte */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/CreateAccount" element={<CreateAccount />} />
 
-    {/* Route principale avec Layout */}
-    <Route 
-      path="/layout" 
-      element={user ? <Layout /> : <Navigate to="/login" />}
-    >
-      <Route index element={<Accueil />} />
-      <Route path="accueil" element={<Accueil />} />
-      <Route path="voir-mon-profile" element={<VoirProfile />} />
-      
-      {/* Routes protégées pour l'admin */}
-      <Route 
-        path="liste-utilisateurs" 
-        element={(
-          <AdminRoute>
-            <ListeUtilisateurs />
-          </AdminRoute>
-        )} 
-      />
-      <Route 
-        path="ajouter-utilisateur" 
-        element={(
-          <AdminRoute>
-            <AjouterUtilisateur />
-          </AdminRoute>
-        )} 
-      />
-      <Route 
-        path="demande-utilisateur" 
-        element={(
-          <AdminRoute>
-            <DemandesUtilisateurs />
-          </AdminRoute>
-        )} 
-      />
-      <Route 
-        path="statistique" 
-        element={(
-          <AdminRoute>
-            <StatisticsDashboard />
-          </AdminRoute>
-        )} 
-      />
+        {/* Route principale avec Layout */}
+        <Route 
+          path="/layout" 
+          element={user ? <Layout /> : <Navigate to="/login" />}
+        >
+          <Route index element={<Accueil />} />
+          <Route path="accueil" element={<Accueil />} />
+          <Route path="voir-mon-profile" element={<VoirProfile />} />
+          
+          {/* Routes protégées pour l'admin */}
+          <Route 
+            path="liste-utilisateurs" 
+            element={(
+              <AdminRoute>
+                <ListeUtilisateurs />
+              </AdminRoute>
+            )} 
+          />
+          <Route 
+            path="ajouter-utilisateur" 
+            element={(
+              <AdminRoute>
+                <AjouterUtilisateur />
+              </AdminRoute>
+            )} 
+          />
+          <Route 
+            path="demande-utilisateur" 
+            element={(
+              <AdminRoute>
+                <DemandesUtilisateurs />
+              </AdminRoute>
+            )} 
+          />
+          <Route 
+            path="statistique" 
+            element={(
+              <AdminRoute>
+                <StatisticsDashboard />
+              </AdminRoute>
+            )} 
+          />
 
-      {/* Route Modifier Couleur */}
-      <Route path="change-color" element={<ChangeColor />} />
-    </Route>
+          {/* Route Modifier Couleur */}
+          <Route path="change-color" element={<ChangeColor />} />
+        </Route>
 
-    {/* Redirection par défaut */}
-    <Route path="*" element={<Navigate to="/login" />} />
-  </Routes>
-</Router>
-
+        {/* Redirection par défaut */}
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    </Router>
   );
 }
 

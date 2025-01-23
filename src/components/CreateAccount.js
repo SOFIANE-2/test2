@@ -26,19 +26,19 @@ function CreateAccount() {
   const validatePassword = (password) => {
     const errors = [];
     if (!password.split('').some((char) => char >= 'A' && char <= 'Z')) {
-      errors.push('Doit inclure au moins une lettre majuscule');
+      errors.push('Le mot de passe doit inclure au moins une lettre majuscule');
     }
     if (!password.split('').some((char) => char >= 'a' && char <= 'z')) {
-      errors.push('Doit inclure au moins une lettre minuscule');
+      errors.push('Le mot de passe doit inclure au moins une lettre minuscule');
     }
     if (!password.split('').some((char) => char >= '0' && char <= '9')) {
-      errors.push('Doit inclure au moins un chiffre');
+      errors.push('Le mot de passe doit inclure au moins un chiffre');
     }
     if (!['!', '@', '#', '$', '%', '^', '&', '*'].some((char) => password.includes(char))) {
-      errors.push('Doit inclure au moins un caractère spécial');
+      errors.push('Le mot de passe doit inclure au moins un caractère spécial');
     }
     if (password.length < 8) {
-      errors.push('Doit comporter au moins 8 caractères');
+      errors.push('Le mot de passe doit comporter au moins 8 caractères');
     }
     return errors;
   };
@@ -184,7 +184,6 @@ function CreateAccount() {
           <button id="submit-button" type="submit">Créer le compte</button>
         </form>
 
-        {/* Affichage des erreurs */}
         {errors.length > 0 && (
           <div id="error-message-container">
             <ul>
